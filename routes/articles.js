@@ -24,4 +24,20 @@ router.get('/', async (req, res) => {
     }
 });
 
+
+// Route to get a random article
+router.get('/random-article', async (req, res) => {
+    try {
+        const count = await Article.countDocuments();
+        const rand = Math.floor(Math.random() * count);
+        const randomArticle = await Article.findOne().skip(rand);
+        if (!randomArticle) {
+            return res.status(404).json({ msg: "No articles found" });
+        }
+        res.json(randomArticle);
+    } catch (err) {
+        res.status(500).json({ msg: err.message });
+    }
+});
+
 module.exports = router;
