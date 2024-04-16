@@ -1,8 +1,6 @@
 // Import the mongoose library to interact with MongoDB
 const mongoose = require('mongoose');
 
-// Incorrect import that does not work as intended and should be removed or ignored
-const { MONGODB_URI } = require('./.env');
 
 // Retrieve the MongoDB URI from environment variables, ensuring that sensitive information is not hardcoded
 const uri = process.env.MONGODB_URI;
