@@ -1,5 +1,6 @@
 body {
     display: none;
+   
 }
 
 body {
@@ -20,7 +21,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: darkgreen;
+    background-color: rgb(1, 63, 1);
 }
 
 nav ul {
@@ -57,6 +58,21 @@ nav li a {
     text-decoration: none;
   }
   
+form button {
+    background-color: #c4c4c4;
+    border: 1px solid #f8f9fa;
+    border-radius: 5px;
+    color: #212529;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
 button {
     background-color: #c4c4c4;
     border: 1px solid #f8f9fa;
@@ -69,7 +85,18 @@ button {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 60%;
 }
 h1 {
     text-align: center;
 }
+
+.center-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    overflow: hidden;
+}
+
