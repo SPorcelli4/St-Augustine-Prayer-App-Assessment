@@ -3,5 +3,28 @@ $(function() {
 });
 
 window.onload = function() {
-    document.body.style.display = 'block';
-};
+    // Make a HTTP GET request to the server's '/api/random-article' endpoint
+        fetch('/api/articles/random-article')
+            .then(response => response.json())  // Convert the response to JSON
+            .then(article => {
+                // Find the HTML element with the ID 'articlesList'
+                const articlesList = document.getElementById('articlesList-random');
+                articlesList.innerHTML = ''; // Clear any existing content in the list
+
+                // Create a new list item element for the article
+                const titleItem = document.createElement('h1');
+                // Set the text of the list item to include the article's title
+                titleItem.textContent = `Title: ${article.title}`;
+                // Append the new list item for the title to the 'articlesList' element
+                articlesList.appendChild(titleItem);
+    
+                // Create a new list item element for the article body
+                const bodyItem = document.createElement('p');
+                // Set the text of the list item to include the article's body
+                bodyItem.textContent = `Body: ${article.body}`;
+                // Append the new list item for the body to the 'articlesList' element
+                articlesList.appendChild(bodyItem);
+            })
+          .catch(error => console.error('Error fetching article:', error)); // Log any errors to the console
+         document.body.style.display = 'block';
+    };

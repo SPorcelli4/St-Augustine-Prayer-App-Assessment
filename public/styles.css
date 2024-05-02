@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 body {
     display: none;
    
@@ -87,9 +91,7 @@ button {
     transform: translateX(-50%);
     top: 60%;
 }
-h1 {
-    text-align: center;
-}
+
 
 .center-form {
     display: flex;
