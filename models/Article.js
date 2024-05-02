@@ -9,6 +9,10 @@ const ArticleSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    tags: [{
+        type: String,
+        required: false
+    }]
 });
 
 const Article = mongoose.model('Article', ArticleSchema);
