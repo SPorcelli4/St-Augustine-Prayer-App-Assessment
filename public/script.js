@@ -41,7 +41,7 @@ document.getElementById('fetchArticles-random').addEventListener('click', functi
             // Create a new list item element for the article body
             const bodyItem = document.createElement('p');
             // Set the text of the list item to include the article's body
-            bodyItem.textContent = `Body: ${article.body}`;
+            bodyItem.textContent = `${article.body}`;
             // Append the new list item for the body to the 'articlesList' element
             articlesList.appendChild(bodyItem);
         })

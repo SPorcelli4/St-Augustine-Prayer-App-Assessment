@@ -1,14 +1,12 @@
 h1 {
     text-align: center;
+    font-family: "Lato" !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
 }
 
 body {
     display: none;
-   
-}
-
-body {
-    
     margin: 0;
     padding: 0;
 }
@@ -19,49 +17,37 @@ body {
     display: flex;
     justify-content: center;
 }
-
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-    background-color: rgb(1, 63, 1);
 }
 
-nav ul {
+nav h1 { 
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: darkgreen; 
+}
+
+nav ul{
     display: flex;
-    align-items: center;
     list-style-type: none;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-
+    justify-content: center;
+    padding: 0px;
+    font-weight: 500;
 }
 
-nav .band-name {
-    position: absolute;
-    left: 50%;               /* Center the band name horizontally */
-    transform: translateX(-50%); /* Shift it back to truly center it */
-    z-index: 1;              /* Ensure it's on top if overlapping occurs */
-}
-
-nav ul li {
-    margin-right: 20px;      /* Space out the list items */
-}
-
-nav ul li:last-child {
-    margin-right: 0;         /* Remove margin from the last item to avoid unnecessary spacing */
-}
 
 nav li a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    color: rgb(1, 63, 1);
+    padding: 0px 15px;
     text-decoration: none;
-  }
-  
+    font-size: 14px;
+    font-family: "Trebuchet MS" !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+}
+
+
 form button {
     background-color: #c4c4c4;
     border: 1px solid #f8f9fa;
@@ -102,3 +88,6 @@ button {
     overflow: hidden;
 }
 
+p {
+    text-align: center;
+}
