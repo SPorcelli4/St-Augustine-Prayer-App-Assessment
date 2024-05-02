@@ -72,10 +72,10 @@ button {
     font-size: 1rem;
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 60%;
+    top: 75%;
 }
 
 
@@ -89,5 +89,19 @@ button {
 }
 
 p {
+    
+    font-size: 20px;
     text-align: center;
+    letter-spacing: 2px !important;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    padding: 25px;
+    line-height: 1.5;
+}
+ul {
+    padding: 0px 250px;
+    text-align: center;
+    color: #2a2a2a;
 }
