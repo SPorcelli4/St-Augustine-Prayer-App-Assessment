@@ -1,6 +1,7 @@
 // Import the express framework for creating the HTTP server
 const express = require('express');
-
+const cookieParser = require('cookie-parser');
+const { requireAuth } = require('./middleware/authMiddleware');
 // Load environment variables from the .env file
 require('dotenv').config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 // Middleware to parse URL-encoded bodies. Useful for parsing the data coming from HTML forms
 app.use(express.urlencoded({ extended: true }));
 
+app.use(cookieParser());
 // Serve static files (like HTML, CSS, JavaScript) from the 'public' directory
 app.use(express.static('public'));
 
@@ -33,8 +35,9 @@ app.use('/api/articles', articleRoutes);
 const authRoutes = require('./routes/authRoutes');
 app.use(authRoutes);
 
+
 app.get('/', (req, res) => { res.render('index') });
-app.get('/addprayers', (req, res) => { res.render('addprayers') });
+app.get('/addprayers', requireAuth, (req, res) => { res.render('addprayers') });
 app.get('/tagprayers', (req, res) => { res.render('tagprayers') });
 
 
