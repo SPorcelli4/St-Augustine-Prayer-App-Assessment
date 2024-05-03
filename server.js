@@ -30,12 +30,16 @@ const articleRoutes = require('./routes/articles');
 // Mount the articles routes at the '/api/articles' path, all routes defined in articleRoutes will be prefixed with this path
 app.use('/api/articles', articleRoutes);
 
+const authRoutes = require('./routes/authRoutes');
+app.use(authRoutes);
+
+app.get('/', (req, res) => { res.render('index') });
+app.get('/addprayers', (req, res) => { res.render('addprayers') });
+app.get('/tagprayers', (req, res) => { res.render('tagprayers') });
+
 
 // Start the server on the port specified in the environment variables or default to 3000
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running at port 3000');
 });
 
-app.get('/', (req, res) => { res.render('index') });
-app.get('/addprayers', (req, res) => { res.render('addprayers') });
-app.get('/tagprayers', (req, res) => { res.render('tagprayers') });
