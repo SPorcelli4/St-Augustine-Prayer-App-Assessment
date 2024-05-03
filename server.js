@@ -22,6 +22,8 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files (like HTML, CSS, JavaScript) from the 'public' directory
 app.use(express.static('public'));
 
+// view engine setup, still learning this
+app.set('view engine', 'ejs');
 // Import routes for the "articles" resource from the articles routes module
 const articleRoutes = require('./routes/articles');
 
@@ -33,3 +35,7 @@ app.use('/api/articles', articleRoutes);
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running at port 3000');
 });
+
+app.get('/', (req, res) => { res.render('index') });
+app.get('/addprayers', (req, res) => { res.render('addprayers') });
+app.get('/tagprayers', (req, res) => { res.render('tagprayers') });

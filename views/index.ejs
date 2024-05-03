@@ -9,6 +9,7 @@
     <link rel="icon" href="/images/mobile-logo.svg">
 </head> 
 <body>
+    <%- include('partials/header'); -%>
     <div id="navbar"></div> 
     <div class="content-wrapper"></div>
     <ul id="articlesList-random"></ul> <!-- Placeholder for displaying articles -->
@@ -18,14 +19,7 @@
     <br>
     <br>
     <br>
-<label for="tagSelect-random">Choose a tag:</label>
-<select id="tagSelect-random">
-    <option value="general">General</option>
-    <option value="lent">Lent</option>
-    <option value="special">Special</option>
-</select>
-<button id="fetchRandomArticle">Fetch Random Article By Tag</button>
-<ul id="randomArticleList"></ul>
+
 
    
 </div>
