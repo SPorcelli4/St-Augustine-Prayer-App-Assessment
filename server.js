@@ -1,7 +1,7 @@
 // Import the express framework for creating the HTTP server
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const { requireAuth } = require('./middleware/authMiddleware');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
 // Load environment variables from the .env file
 require('dotenv').config();
 
@@ -32,9 +32,13 @@ const articleRoutes = require('./routes/articles');
 // Mount the articles routes at the '/api/articles' path, all routes defined in articleRoutes will be prefixed with this path
 app.use('/api/articles', articleRoutes);
 
+app.use(checkUser); // This applies the middleware to all incoming requests
+
 const authRoutes = require('./routes/authRoutes');
 app.use(authRoutes);
 
+const postRoutes = require('./routes/postRoutes');
+app.use(postRoutes);
 
 app.get('/', (req, res) => { res.render('index') });
 app.get('/addprayers', requireAuth, (req, res) => { res.render('addprayers') });

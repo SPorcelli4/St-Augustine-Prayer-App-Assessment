@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+<form action="/post" method="post">
+
+        <textarea rows="4" cols="50" id="header" name="header" required></textarea><br><br>
+        <button type="submit">Submit Post</button>
+        </form>
+
+        <br>
+
+        <button id="getallposts">Get all posts</button>
+        <ul id="postsList"></ul> <!-- Placeholder for displaying posts? -->
+    </div>
+
+
+    <script src="postsstatic.js"></script>
