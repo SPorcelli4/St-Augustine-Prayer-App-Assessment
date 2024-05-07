@@ -4,35 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>St Augustine's Prayer App</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/images/mobile-logo.svg">
 </head> 
 <body>
     <%- include('partials/header'); -%>
-    <div id="navbar"></div> 
-    <div class="content-wrapper"></div>
-    <ul id="articlesList-random"></ul> <!-- Placeholder for displaying articles -->
-    <button id="fetchArticles-random">New Prayer</button>
-
-
-    <br>
-    <br>
-    <br>
-
-
-   
-</div>
-<%- include('partials/footer'); -%>
-
-    
+    <div id="navbar"></div>
+    <div class="content-wrapper">
+        <ul id="articlesList-random"></ul>
+        <button id="fetchArticles-random">New Prayer</button>
+    </div>
+    <%- include('partials/footer'); -%>
     <script src="onload.js"></script>
     <script src="script.js"></script>
     <script src="template.js"></script>
-    
-    
-   
-
-
 </body>
 </html>

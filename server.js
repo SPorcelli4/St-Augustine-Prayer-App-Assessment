@@ -43,6 +43,7 @@ app.use(postRoutes);
 app.get('/', (req, res) => { res.render('index') });
 app.get('/addprayers', requireAuth, (req, res) => { res.render('addprayers') });
 app.get('/tagprayers', (req, res) => { res.render('tagprayers') });
+app.get('/testgpt', (req, res) => { res.render('testgpt')});
 
 
 // Start the server on the port specified in the environment variables or default to 3000

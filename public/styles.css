@@ -10,14 +10,13 @@ body {
     font-size: 1.2rem;
     letter-spacing: 1px;
     background: #fafafa;
+    
 }
 
 
 .content-wrapper {
     width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    min-height: 480px;
 }
 nav {
     width: 100%;
@@ -142,7 +141,7 @@ form input {
     font-weight: bold;
   }
   footer {
-    position: absolute; /* Acts as the reference point for absolutely positioned children */
+    position: relative; /* Acts as the reference point for absolutely positioned children */
     width: 100%; /* Ensure the footer spans the full width of the page */
     min-height: 100px; /* Set a minimum height for the footer */
     overflow: hidden; /* Prevents content from overflowing */
@@ -151,7 +150,7 @@ form input {
 }
 
 footer ul {
-    position: absolute;
+    position: relative;
     bottom: 0px; /* 30px from the bottom */
     display: flex;
     flex-direction: column;
