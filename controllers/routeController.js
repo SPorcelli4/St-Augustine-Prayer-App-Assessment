@@ -40,11 +40,19 @@ module.exports.random_article_get = async (req, res) => {
 module.exports.random_article_by_tag_get = async (req, res) => {
     const { tag } = req.query;
     try {
-        const count = await Article.countDocuments({ tags: tag });
-        const rand = Math.floor(Math.random() * count);
-        const randomArticle = await Article.findOne({ tags: tag }).skip(rand);
+        let randomArticle;
+        if (tag === "any") {
+            const count = await Article.countDocuments({});
+            const rand = Math.floor(Math.random() * count);
+            randomArticle = await Article.findOne({}).skip(rand);
+        } else {
+            const count = await Article.countDocuments({ tags: tag });
+            const rand = Math.floor(Math.random() * count);
+            randomArticle = await Article.findOne({ tags: tag }).skip(rand);
+        }
+
         if (!randomArticle) {
-            return res.status(404).json({ msg: "No articles found with the specified tag" });
+            return res.status(404).json({ msg: "No articles found" });
         }
         res.json(randomArticle);
     } catch (err) {

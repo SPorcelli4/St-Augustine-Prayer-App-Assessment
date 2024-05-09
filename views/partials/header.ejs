@@ -9,7 +9,6 @@
 <body>
 <nav>
     <h1>St Augustine's Prayer App</h1>
-    <div style="height: 20px; overflow: hidden; width: 100%;"></div>
     <ul class="topnav">
         <% if (typeof user !== 'undefined' && user) { %>
             <!-- <li>Welcome, <%= user.email %></li> -->
@@ -20,6 +19,7 @@
             <!-- <li><a href="/signup" class="btn">SIGNUP</a></li> -->
             <li id="menu"><a href="/">HOME</a></li>
             <li id="menu1"><a href="/tagprayers">TAGGED PRAYERS</a></li>
+            <li id="menu3"><a href="/testgpt">PRAYER GENERATOR</a></li>
         <% } %>
     </ul>
     

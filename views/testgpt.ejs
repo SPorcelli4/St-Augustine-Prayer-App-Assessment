@@ -10,6 +10,7 @@
     </style>
 </head>
 <body>
+    <%- include('partials/header'); -%>
     <h1>Prayer Request App</h1>
     <form id="prayerForm">
         <div>
@@ -27,6 +28,7 @@
         <button type="button" onclick="submitPrayerRequest()">Submit</button>
     </form>
     <div id="response"></div>
+    <%- include('partials/footer'); -%>
 
     <script src="app.js"></script>
 </body>
