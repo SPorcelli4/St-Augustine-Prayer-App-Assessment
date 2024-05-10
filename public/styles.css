@@ -17,7 +17,7 @@ body {
 
 .content-wrapper {
     width: 100%;
-    min-height: 600px;
+    min-height: 570px;
 }
 nav {
     width: 100%;
@@ -151,12 +151,8 @@ form input {
     font-weight: bold;
   }
   footer {
-    position: relative; /* Acts as the reference point for absolutely positioned children */
     width: 100%; /* Ensure the footer spans the full width of the page */
-    min-height: 100px; /* Set a minimum height for the footer */
     overflow: hidden; /* Prevents content from overflowing */
-    bottom: 30px;
-    left: 0px;
 }
 
 footer ul {
@@ -185,4 +181,10 @@ footer ul li a{
     text-decoration: none;
     display: block;
     font-size: 15px;
+}
+
+#tagSelect-random {
+    position: relative;
+    left: 250px;
+    bottom: 55px;
 }

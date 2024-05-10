@@ -9,20 +9,20 @@
 </head>
 <body>
     <%- include('partials/header'); -%>
-    <div id="navbar"></div>
     <div class="content-wrapper">
-    <label for="tagSelect-random">Choose a filter:</label>
+
+    <ul id="randomArticleList"></ul>
+    <button id="fetchRandomArticle">Get Prayer</button>
     <select id="tagSelect-random">
         <option value="any">Any</option>
         <option value="general">General</option>
         <option value="lent">Lent</option>
         <option value="special">Special</option>
     </select>
-    <button id="fetchRandomArticle">Get Prayer</button>
-    <ul id="randomArticleList"></ul>
 </div>
     <%- include('partials/footer'); -%>
     <script src="taggedscript.js"></script>
-    <script src="template.js"></script>
+    <script src="onload.js"></script>
+    
 </body>
 </html>

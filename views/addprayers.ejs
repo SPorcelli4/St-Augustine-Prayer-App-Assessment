@@ -11,8 +11,9 @@
 <body>
     <%- include('partials/header'); -%>
     <div id="navbar"></div>
-    <h1>Add prayers</h1>
+    
     <form action="/api/articles" method="post">
+        <h2>Add prayers</h2>
         <div class="center-form">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required><br><br>
@@ -21,7 +22,7 @@
                     <option value="general">General</option>
                     <option value="lent">Lent</option>
                     <option value="special">Special</option>
-                </select><br><br>
+                </select>
             <label for="body">Content:</label>
             <textarea rows="4" cols="50" id="body" name="body" required></textarea><br><br>
             <button type="submit">Submit Article</button>

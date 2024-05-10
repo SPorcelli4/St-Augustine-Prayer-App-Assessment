@@ -21,7 +21,7 @@ window.onload = function() {
     
                 const tagItem = document.createElement('p');
                 tagItem.className = 'tagItem';
-                tagItem.textContent = `${article.tag}`;
+                tagItem.textContent = `${article.tags}`;
                 articlesList.appendChild(tagItem)
 
                 // Create a new list item element for the article body
