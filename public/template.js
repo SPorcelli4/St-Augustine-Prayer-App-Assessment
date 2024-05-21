@@ -1,7 +1,3 @@
-// $(function() {
-//     $("#navbar").load("templates/navbar.ejs"); // Load the navbar from an external file
-// });
-
 window.onload = function() {
     // Make a HTTP GET request to the server's '/api/random-article' endpoint
         fetch('/api/articles/random-article')

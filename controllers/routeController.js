@@ -16,7 +16,7 @@ module.exports.article_post = async (req, res) => {
     try {
         const newArticle = new Article({ title, body, tags });
         await newArticle.save();
-        res.status(201).json(newArticle);
+        res.status(201).json({ msg: "Prayer Uploaded" });
     } catch (err) {
         res.status(400).json({ msg: err.message });
     }

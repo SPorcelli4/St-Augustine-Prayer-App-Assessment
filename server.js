@@ -37,12 +37,8 @@ app.use(checkUser); // This applies the middleware to all incoming requests
 const authRoutes = require('./routes/authRoutes');
 app.use(authRoutes);
 
-const postRoutes = require('./routes/postRoutes');
-app.use(postRoutes);
-
-app.get('/', (req, res) => { res.render('index') });
+app.get('/', (req, res) => { res.render('tagprayers') });
 app.get('/addprayers', requireAuth, (req, res) => { res.render('addprayers') });
-app.get('/tagprayers', (req, res) => { res.render('tagprayers') });
 app.get('/testgpt', (req, res) => { res.render('testgpt')});
 
 

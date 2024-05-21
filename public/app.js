@@ -28,27 +28,4 @@ async function submitPrayerRequest() {
         document.getElementById('response').innerText = 'Failed to generate prayer. Please try again.';
     }
 }
-// async function submitPrayerRequest() {
-//     const topic = document.getElementById('topic').value;
-//     const reason = document.getElementById('reason').value;
-//     const requestData = {
-//         prompt: `Generate a prayer for the topic '${topic}' related to '${reason}'.`,
-//         max_tokens: 150
-//     };
 
-//     try {
-//         const response = await fetch('https://api.openai.com/v1/chat/completions', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Authorization': `Bearer sk-proj-k4yoNcs03gynNKJRZqZiT3BlbkFJ3NBz16L9JYzysnDCxses`
-//             },
-//             body: JSON.stringify(requestData)
-//         });
-//         const data = await response.json();
-//         document.getElementById('response').innerText = data.choices[0].message.content;
-//     } catch (error) {
-//         console.error('Error:', error);
-//         document.getElementById('response').innerText = 'Failed to generate prayer. Please try again.';
-//     }
-// }
