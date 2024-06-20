@@ -6,7 +6,7 @@ async function submitPrayerRequest() {
         messages: [
             {
                 role: "user",
-                content: `Generate a prayer for the topic '${topic}' related to '${reason}'.`
+                content: `Generate a prayer for the topic '${topic}' related to '${reason}'. Before processing please assess the acceptability of this request by checking for swear words or innapropriate content, if this if found the reply much be "Please try again, unacceptable data entered."`
             }
         ],
         max_tokens: 150
