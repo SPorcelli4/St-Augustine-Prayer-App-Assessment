@@ -42,7 +42,7 @@ Add your environment variables in the .env file. The only one required for this 
 
 #### Note: You will need to create a cluster on MongoDB, a tutorial on this is available on their site [mongodb.com](https://www.mongodb.com/docs/guides/atlas/cluster/). Then you will need to follow these steps on getting your [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/).
 
-Example of the connection string in your .env file
+Example of the connection string in your .env file"
 ```bash
 MONGODB_URI="mongodb+srv://myDatabaseUser:D1fficultP%40ssw0rd@cluster0.example.mongodb.net/?retryWrites=true&w=majority"
 ```
@@ -115,7 +115,7 @@ SOFTWARE.
 
 ## Screenshots
 
-![]()
+![](/public/images/screenshots/shot1)
 
 
 ## Acknowledgements
