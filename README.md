@@ -115,7 +115,7 @@ SOFTWARE.
 
 ## Screenshots
 
-![](/public/images/screenshots/shot1)
+![](public/images/screenshots/shot1)
 
 
 ## Acknowledgements
