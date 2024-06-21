@@ -47,6 +47,17 @@
                         data[key] = value;
                     }
                 });
+
+                // Check if prayer content is at least 10 words
+                const prayerContent = data.body.trim().split(/\s+/);
+                if (prayerContent.length < 10) {
+                    alert('Prayer too short. It must be at least 10 words long.');
+                    return;
+                }
+                if (prayerContent.length > 500) {
+                    alert('Prayer too short. It must be at less than 501 words long.');
+                    return;
+                }
         
                 try {
                     const response = await fetch('/api/articles', {
