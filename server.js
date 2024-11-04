@@ -43,7 +43,7 @@ app.get('/testgpt', (req, res) => { res.render('testgpt')});
 
 
 // Start the server on the port specified in the environment variables or default to 3000
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Server is running at port 3000');
+app.listen(process.env.PORT || 5000, () => {
+    console.log('Server is running at port 5000');
 });
 
